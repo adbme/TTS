@@ -5,6 +5,10 @@
     require "../src/header.php";
 
 ?>
+
+
+
+
 <video id="background-video" autoplay muted>
     <source src="/img/chargement.mp4" type="video/mp4">
 </video>

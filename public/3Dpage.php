@@ -46,12 +46,18 @@ require_once "../src/header.php";
 
 <!-- Le menu qui s'ouvre sur la gauche -->
 <div id="menu">
-  
+
+
+<!-- Contenu menu -->
+
+<p style="font-size:20px;color:#9B9D9E;">Floors</p>
    <!--Boutton étages-->
 <button style="margin-left: 100px;" id="bouton-play1" onclick="playAudio()" class="boutton4">étage haut</button>
-<button style="margin-left: 300px;" id="bouton-play2" onclick="playAudio()" style="margin-left: 100px;" class="boutton4">étage bas</button>
+<button id="bouton-play2" onclick="playAudio()" style="margin-left: 100px;" class="boutton4">étage bas</button>
 
 <audio id="myAudio" src="img/click4.mp4"></audio>
+
+<audio id="myAudiOhio" src="img/ohio.mp3"></audio>
 
 <script>
     function playAudio() {
@@ -65,7 +71,7 @@ require_once "../src/header.php";
     <source src="/img/chargement.mp4" type="video/mp4">
 </video>
 <!-- Bouton Select Room -->
-<div class="select-room" onclick="playAudio(), toggleDropdown()">Select Room <img class="arrow"
+<div id="selectRoomButton" class="select-room" onclick="playAudio(), toggleDropdown()">Select Room <img class="arrow"
         src="style/dropdown/image/arrow.png" alt="">
 </div>
 
@@ -135,7 +141,7 @@ require_once "../src/header.php";
   
     menu.classList.toggle("open");
     if (menu.classList.contains("open")) {
-      menuButton.textContent = "Fermer";
+      menuButton.textContent = "Close";
     } else {
       menuButton.textContent = "Menu";
     }
@@ -146,7 +152,23 @@ require_once "../src/header.php";
     if (event.key === "m") {
       toggleMenu();
     }
+    else if(event.key === "o"){
+       
+        var audiOhio = document.getElementById("myAudiOhio");
+        audiOhio.play();
+    }
   });
+
+
+
+  
+
+
+ 
+
+  
+
+
 </script>
 
 

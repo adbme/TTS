@@ -8,16 +8,16 @@ jubgfrau.addEventListener('click', function () {
         y: 200,
         onUpdate: function () {
             // Pointer la caméra vers le cube
-            camera.lookAt(0, 0, 300);
+
         }
     })
         .to(camera.position, {
-            z: 300,
-            x: -40,
-            y: 20,
+            z: -50,
+            x: -50,
+            y: 170,
             onUpdate: function () {
                 // Pointer la caméra vers le cube
-                camera.lookAt(0, 300, 300);
+
             }
         });
 });
@@ -124,7 +124,7 @@ chasseron.addEventListener('click', function () {
     })
 });
 
-// Argntine
+// Argentine
 const argentine = document.getElementById('roomTitle4')
 const argentineTL = gsap.timeline();
 argentine.addEventListener('click', function () {
@@ -138,9 +138,9 @@ argentine.addEventListener('click', function () {
         }
     })
     argentineTL.to(camera.position, {
-        z: 340,
-        x: 120,
-        y: 20,
+        z: -60,
+        x: -140,
+        y: 140,
         onUpdate: function () {
 
 
@@ -162,11 +162,11 @@ chamossaire.addEventListener('click', function () {
         }
     })
     chamossaireTL.to(camera.position, {
-        z: 0,
-        x: 20,
-        y: 2,
+        z: 40,
+        x: -140,
+        y: 140,
         onUpdate: function () {
-            camera.position.x += -13; // zoom avant
+
 
         }
     })
@@ -186,9 +186,9 @@ monch.addEventListener('click', function () {
         }
     })
     monchTL.to(camera.position, {
-        z: 340,
-        x: 120,
-        y: 20,
+        z: 50,
+        x: -85,
+        y: 150,
         onUpdate: function () {
 
 
@@ -210,9 +210,9 @@ eiger.addEventListener('click', function () {
         }
     })
     eigerTL.to(camera.position, {
-        z: 340,
-        x: 120,
-        y: 20,
+        z: 30,
+        x: -60,
+        y: 150,
         onUpdate: function () {
 
 
@@ -225,18 +225,18 @@ const dentDuMidi = document.getElementById('roomTitle8')
 const dentDuMidiTL = gsap.timeline();
 dentDuMidi.addEventListener('click', function () {
     dentDuMidiTL.to(camera.position, {
-        z: 300,
-        x: 100,
-        y: 200,
+        z: -300,
+        x: -300,
+        y: 300,
         onUpdate: function () {
 
 
         }
     })
     dentDuMidiTL.to(camera.position, {
-        z: 340,
-        x: 120,
-        y: 20,
+        z: 30,
+        x: -20,
+        y: 170,
         onUpdate: function () {
 
 

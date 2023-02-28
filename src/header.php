@@ -12,6 +12,9 @@ if(isset($_SESSION['msatg'])){
 <!doctype html>
 <HTML>
 <head>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -36,7 +39,7 @@ if(isset($_SESSION['msatg'])){
             <div class="navbar-nav ">
                 <a href="index.php" class="nav-item nav-link "><i class="fa fa-home"></i><span>Home</span></a>
                 <?php if (empty($_SESSION['msatg'])) { ?>
-                    <a href="?action=login" type="button" class="btn btn-success">LOGIN</a>
+                    <a href="?action=login" type="button" onclick="playAudio()" class="btn btn-success">LOGIN</a>
                 <?php } else { ?>
                     <a href="3Dpage.php" class="nav-item nav-link "><i class="fa fa-briefcase"></i><span>Rooms</span></a>
                     <?php  $graph->getMicrosoftUserProfileinfo();

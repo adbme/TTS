@@ -7,15 +7,15 @@ setInterval(getroomstatus, 5 * 60 * 1000)
 const positions = [
     {
         roomName: "lausanne.pleiades@jobtrek.ch",
-        position: { x: -20, y: 40, z: -20 }
+        position: { x: -20, y: 30, z: -20 }
     },
     {
         roomName: "lausanne.suchet@jobtrek.ch",
-        position: { x: -130, y: 40, z: 20 }
+        position: { x: -130, y: 30, z: 20 }
     },
     {
         roomName: "lausanne.chasseron@jobtrek.ch",
-        position: { x: -130, y: 40, z: -60 }
+        position: { x: -130, y: 30, z: -60 }
     },
     {
         roomName: "lausanne.argentine@jobtrek.ch",
