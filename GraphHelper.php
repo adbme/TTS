@@ -1,5 +1,4 @@
 <?php
-
 use GuzzleHttp\{Client};
 use Microsoft\Graph\Graph;
 use Microsoft\Graph\Model;
