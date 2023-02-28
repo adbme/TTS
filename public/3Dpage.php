@@ -42,7 +42,7 @@ require_once "../src/header.php";
 
 
 <!-- Le bouton qui ouvre ou ferme le menu -->
-<button onclick="playAudio()" id="menuButton">Menu <p id="pM" style="color: #384047; font-size: 14px; margin-left: 15px; padding-top: 15px;">m</p> </button>
+<button onclick="playAudio()" id="menuButton">Menu <p  style="color: #384047; font-size: 14px; margin-left: 15px; padding-top: 15px;">m</p> </button>
 
 <!-- Le menu qui s'ouvre sur la gauche -->
 <div id="menu">
@@ -52,9 +52,10 @@ require_once "../src/header.php";
 
 <p style="font-size:20px;color:#9B9D9E;">Floors</p>
    <!--Boutton étages-->
-<button style="margin-left: 100px;" id="bouton-play1" onclick="playAudio()" class="boutton4">étage haut</button>
-<button id="bouton-play2" onclick="playAudio()" style="margin-left: 100px;" class="boutton4">étage bas</button>
-
+   <div class="buttonTOPBottom">
+<button style="margin-left: 300px;" id="bouton-play1" onclick="playAudio()" class="boutton4">TOP <p class="floor">floor</p></button>
+<button id="bouton-play2" onclick="playAudio()" style="margin-left: 100px;" class="boutton4">BOTTOM <p class="floor">floor</p></button>
+</div>
 <audio id="myAudio" src="img/click4.mp4"></audio>
 
 

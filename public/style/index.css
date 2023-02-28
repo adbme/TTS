@@ -27,24 +27,37 @@ body {
 
 }
 
+.floor {
+    color: #384047;
+    font-size: 20px;
+    margin-left: 15px;
+
+}
+
+
+.buttonTOPBottom {
+    display: flex;
+}
 
 .boutton4 {
-    position: absolute;
-    background-color: #000000;
+    background-color: #198754;
     border: none;
     color: white;
-    padding: 15px 32px;
+    width: 166px;
+    height: 55px;
+    border-radius: 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-
 }
 
 .boutton4:hover {
-    background-color: #333333;
+    background-color: #1ea365;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(205, 205, 205, 0.5);
+    transition: all 0.2s ease-in-out;
 }
 
 
