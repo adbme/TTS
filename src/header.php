@@ -26,7 +26,7 @@ if(isset($_SESSION['msatg'])){
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark ">
         <a class="navbar-brand " href="index.php">
             <img src="/img/logo.svg" alt="" width="50" height="50" class="d-inline-block align-text-center">
             Time to Space
@@ -37,7 +37,7 @@ if(isset($_SESSION['msatg'])){
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <div class="navbar-nav ">
-                <a href="index.php" class="nav-item nav-link "><i class="fa fa-home"></i><span>Home</span></a>
+                <a href="index.php" class="nav-item nav-link align-middle"><i class="fa fa-home"></i><span>Home</span></a>
                 <?php if (empty($_SESSION['msatg'])) { ?>
                     <a href="?action=login" type="button" onclick="playAudio()" class="btn btn-success">LOGIN</a>
                 <?php } else { ?>

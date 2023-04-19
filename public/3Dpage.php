@@ -50,12 +50,17 @@ require_once "../src/header.php";
 
 <!-- Contenu menu -->
 
-<p style="font-size:20px;color:#9B9D9E;">Floors</p>
+<div class="bouttonTopBottom">
+<p class="floorTitle">Floors</p>
    <!--Boutton étages-->
-   <div class="buttonTOPBottom">
-<button style="margin-left: 300px;" id="bouton-play1" onclick="playAudio()" class="boutton4">TOP <p class="floor">floor</p></button>
-<button id="bouton-play2" onclick="playAudio()" style="margin-left: 100px;" class="boutton4">BOTTOM <p class="floor">floor</p></button>
+   
+   <div id="bouton-play1" onclick="playAudio()" class="boutton4">TOP <p class="floor">floor</p></div>
+<!-- <button  id="bouton-play1" onclick="playAudio()" class="boutton4">TOP <p class="floor">floor</p></button> -->
+
+<div id="bouton-play2" onclick="playAudio()" class="boutton4">BOTTOM <p class="floor">floor</p></div>
+<!-- <button id="bouton-play2" onclick="playAudio()"  class="boutton4">BOTTOM <p class="floor">floor</p></button> -->
 </div>
+
 <audio id="myAudio" src="img/click4.mp4"></audio>
 
 
@@ -82,56 +87,106 @@ require_once "../src/header.php";
 
     <a href="#" id="roomTitle1" class="roomsLink" onclick="showContent(1)">Pleïades</a>
     <div class="md-content" id="content1">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content1_p1"></p>
+    <p id="content1_p2"></p>
     </div>
 
     <a href="#" id="roomTitle2" class="roomsLink" onclick="showContent(2)">Suchet</a>
     <div class="md-content" id="content2">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content2_p1"></p>
+    <p id="content2_p2"></p>
     </div>
 
     <a href="#" id="roomTitle3" class="roomsLink" onclick="showContent(3)">Chasseron</a>
     <div class="md-content" id="content3">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content3_p1"></p>
+    <p id="content3_p2"></p>
     </div>
 
     <a href="#" id="roomTitle4" class="roomsLink" onclick="showContent(4)">Argentine</a>
     <div class="md-content" id="content4">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content4_p1"></p>
+    <p id="content4_p2"></p>
     </div>
 
     <a href="#" id="roomTitle5" class="roomsLink" onclick="showContent(5)">Chamossaire</a>
     <div class="md-content" id="content5">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content5_p1"></p>
+    <p id="content5_p2"></p>
     </div>
 
     <a href="#" id="roomTitle6" class="roomsLink" onclick="showContent(6)">Mönch</a>
     <div class="md-content" id="content6">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content6_p1"></p>
+    <p id="content6_p2"></p>
     </div>
 
     <a href="#" id="roomTitle7" class="roomsLink" onclick="showContent(7)">Eiger</a>
     <div class="md-content" id="content7">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content7_p1"></p>
+    <p id="content7_p2"></p>
     </div>
 
     <a href="#" id="roomTitle8" class="roomsLink" onclick="showContent(8)">Dent du midi</a>
     <div class="md-content" id="content8">
-        <p>lien animation <br> <br> disponibilité</p>
-    </div>
+    <p id="content8_p1"></p>
+    <p id="content8_p2"></p>    </div>
 
     <a href="#" id="roomTitle9" class="roomsLink" onclick="showContent(9)">Wengen</a>
     <div class="md-content" id="content9">
-        <p>lien animation <br> <br> disponibilité</p>
+    <p id="content9_p1"></p>
+    <p id="content9_p2"></p>
     </div>
 
     <a href="#" id="roomTitle10" class="roomsLink" onclick="showContent(10), size()">Jungfrau</a>
     <div class="md-content" id="content10">
-        <!--img dispo-->
-        <p>Contenu de l'option 10</p>
+       
+        <p id="content10_p1"></p>
+    <p id="content10_p2"></p>
     </div>
 </div>
-  
+
+
+
+<script>
+
+  // Suchet
+fetch('/events.json')
+  .then(response => response.json())
+  .then(data => {
+    const event = data[0].events;
+    const subject = event.subject;
+    const name = event.organizer.emailAddress.name;
+    document.getElementById("content2_p1").innerHTML = subject;
+    document.getElementById("content2_p2").innerHTML = name;
+  })
+  .catch(error => console.error(error));
+
+// Argentine
+  fetch('/events.json')
+  .then(response => response.json())
+  .then(data => {
+    const event = data[1].events; 
+    const subject = event.subject;
+    const name = event.organizer.emailAddress.name;
+    document.getElementById("content4_p1").innerHTML = subject;
+    document.getElementById("content4_p2").innerHTML = name;
+  })
+
+
+  // Chamossaire
+  fetch('/events.json')
+  .then(response => response.json())
+  .then(data => {
+    const event = data[2].events; 
+    const subject = event.subject;
+    const name = event.organizer.emailAddress.name;
+    document.getElementById("content5_p1").innerHTML = subject;
+    document.getElementById("content5_p2").innerHTML = name;
+  })
+
+</script>
+
 
 <script>
   // Quand on appuie sur la touche "m" ou quand on clique sur le bouton, on ajoute ou on enlève la classe "open" au menu
@@ -160,16 +215,6 @@ require_once "../src/header.php";
         audiOhio.play();
     }
   });
-
-
-
-  
-
-
- 
-
-  
-
 
 </script>
 

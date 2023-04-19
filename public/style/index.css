@@ -34,12 +34,23 @@ body {
 
 }
 
+.floorTitle {
 
-.buttonTOPBottom {
-    display: flex;
+    font-size: 20px;
+    color: #9B9D9E;
 }
 
+.bouttonTopBottom {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .boutton4 {
+
+    margin-top: 41px;
     background-color: #198754;
     border: none;
     color: white;
@@ -49,7 +60,7 @@ body {
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+
     cursor: pointer;
 }
 

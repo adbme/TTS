@@ -74,9 +74,7 @@ function init() {
 
     });
 
-    //
 
-    //
     let manager = new THREE.LoadingManager();
     manager.onProgress = function (item, loaded, total) {
         console.log(item, loaded, total);
@@ -85,15 +83,13 @@ function init() {
     let loader = new THREE.GLTFLoader();
     loader.setCrossOrigin('anonymous');
 
-    // Import our GLTF model (must be hosted on codepen or CDN to load properly in my experience)
     let scale = 20;
     let url = "/gltfImport/animation1.glb";
 
 
 
-    ///new var mixer
     let mixer;
-    //
+
     loader.load(url, function (data) {
         gltf = data;
         let object = gltf.scene;

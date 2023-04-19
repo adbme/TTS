@@ -53,7 +53,7 @@ class GraphHelper
                 var_dump($rez['error']);
                 die();
             } else {
-                $_SESSION['msatg'] = 1;  //auth and verified
+                $_SESSION['msatg'] = 1;
                 $_SESSION['uname'] = $rez["displayName"];
                 $_SESSION['id'] = $rez["id"];
                 self::getRoom();
@@ -72,7 +72,7 @@ class GraphHelper
 
     public static function getMicrosoftUserProfileinfo()
     {
-        // Vérifier si l'utilisateur est connecté
+
         if (!isset($_SESSION['msatg'])) {
             return;
         }
@@ -176,7 +176,7 @@ class GraphHelper
 
     private static function GetEventuser($jsonData): void
     {
-        // Vérifier que la liste des salles n'est pas nulle
+        // Vérifier que la liste des salles
         if ($jsonData && isset($jsonData)) {
             $roomEmails = $jsonData;
             // Parcours de chaque salle pour récupérer ses événements

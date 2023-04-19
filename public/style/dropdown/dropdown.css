@@ -7,7 +7,7 @@
 
 /* Styles pour le bouton "Select Room" */
 .select-room {
-    top: 160px;
+    top: 330px;
     left: 10px;
     display: inline-block;
     background-color: #198754;
@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+
 }
 
 
@@ -34,7 +34,7 @@
 .md {
     display: none;
     position: absolute;
-    top: 210px;
+    top: 400px;
     /* Ajuster la position verticale si nécessaire */
     left: 0;
     background-color: #eee;

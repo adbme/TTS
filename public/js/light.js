@@ -50,15 +50,15 @@ const positions = [
 ]
 
 function getroomstatus() {
-    console.log("you know man")
+    // console.log("you know man")
     fetch('/schedules.json')
         .then(response => response.json())
         .then(salles => {
             // Création de la liste
-            console.log(salles)
+            // console.log(salles)
             for (let salle of positions) {
 
-                console.log(salle)
+                // console.log(salle)
 
                 let room = salles.find(s => {
                     return s.roomName === salle.roomName
@@ -71,11 +71,12 @@ function getroomstatus() {
 }
 
 
+
 function addLight(position, disponibilité) {
 
-    let couleur = disponibilité === "Available" ? 'green' : 'red'
+    let couleur = disponibilité === "Available" ? 'green' : '#4b0082'
 
-    let spotLight = new THREE.SpotLight(couleur, 100);
+    let spotLight = new THREE.SpotLight(couleur, 96);
 
     spotLight.position.set(position.x, position.y, position.z);
 
