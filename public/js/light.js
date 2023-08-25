@@ -1,4 +1,6 @@
 getroomstatus()
+
+// toutes les 5 minutes
 setInterval(getroomstatus, 5 * 60 * 1000)
 
 
